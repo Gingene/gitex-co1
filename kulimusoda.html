@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>This is Kulimusoda</title>
-    <script type="module" crossorigin src="/gitex-co1/assets/main-244c3dc9.js"></script>
-    <link rel="stylesheet" href="/gitex-co1/assets/main-0b358fdd.css">
+    <script type="module" crossorigin src="/gitex-co1/assets/main-668cbcc8.js"></script>
+    <link rel="stylesheet" href="/gitex-co1/assets/main-816ba2e6.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -74,33 +74,30 @@
 </nav>
     <div class="container py-5">
       <div class="row justify-content-center mb-3">
-        <div class="col-md-8 bg-meme"></div>
+        <div class="col-md-4">
+          <div class="bg-meme w-100"></div>
+        </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="d-flex">
-            <h2 class="mb-3">如何發PR</h2>
-            <div class="spinner-border text-secondary ms-3" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-          </div>
+      <div class="row justify-content-center mb-3">
+        <div class="col border border-2 border-secondary rounded p-3">
+          <h2 class="mb-3">如何發PR</h2>
           <p class="d-inline-flex gap-1">
             <a
               class="btn btn-outline-success"
               data-bs-toggle="collapse"
-              href="#multiCollapseExample1"
+              href="#multiCollapsePreWork"
               role="button"
               aria-expanded="false"
-              aria-controls="multiCollapseExample1"
+              aria-controls="multiCollapsePreWork"
               >前置作業</a
             >
             <button
               class="btn btn-outline-warning"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target="#multiCollapseExample2"
+              data-bs-target="#multiCollapseWarning"
               aria-expanded="false"
-              aria-controls="multiCollapseExample2"
+              aria-controls="multiCollapseWarning"
             >
               注意事項
             </button>
@@ -108,16 +105,16 @@
               class="btn btn-outline-secondary"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target=".multi-collapse"
+              data-bs-target=".multi-collapse-pr"
               aria-expanded="false"
-              aria-controls="multiCollapseExample1 multiCollapseExample2"
+              aria-controls="multiCollapsePreWork multiCollapseWarning"
             >
               所有事項
             </button>
           </p>
           <div class="row">
             <div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="collapse multi-collapse-pr" id="multiCollapsePreWork">
                 <div class="card card-body">
                   <div class="mb-3">
                     <h3 class="h5 border-bottom">第一步：複製（Fork）專案</h3>
@@ -169,7 +166,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="collapse multi-collapse-pr" id="multiCollapseWarning">
                 <div class="card card-body">
                   <div class="mb-3">
                     <h3 class="h5 border-bottom">注意事項：</h3>
@@ -181,6 +178,120 @@
                       <li>這個資料夾抓下來就有git了</li>
                       <li>記得cd到這個資料夾內</li>
                       <li>細節待補充...</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col border border-2 border-secondary rounded p-3">
+          <h2 class="mb-3">如何Pull</h2>
+          <p class="d-inline-flex gap-1">
+            <a
+              class="btn btn-outline-info"
+              data-bs-toggle="collapse"
+              href="#multiCollapsePull1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="multiCollapsePull1"
+              >git流程</a
+            >
+            <button
+              class="btn btn-outline-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#multiCollapsePull2"
+              aria-expanded="false"
+              aria-controls="multiCollapsePull2"
+            >
+              補充項目
+            </button>
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target=".multi-collapse-pull"
+              aria-expanded="false"
+              aria-controls="multiCollapsePull1 multiCollapsePull2"
+            >
+              所有事項
+            </button>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse-pull" id="multiCollapsePull1">
+                <div class="card card-body">
+                  <div class="mb-3">
+                    <h3 class="h5 border-bottom">下載更新所需指令</h3>
+                    <p>
+                      目的：利用建立遠端節點，拉取資料下來本地端，以取得原專案的最新進度
+                    </p>
+                    <ol>
+                      <li class="mb-2">
+                        取得遠端節點：
+                        <code class="bg-light px-2 py-1 rounded-1 mx-1"
+                          >git remote add [自命名節點名稱] [原專案url]</code
+                        >
+                      </li>
+                      <li class="mb-2">
+                        確認遠端分支列表：<code
+                          class="bg-light px-2 py-1 rounded-1 mx-1"
+                          >git remote -v</code
+                        >
+                      </li>
+                      <li class="mb-2">
+                        取得遠端資料：
+                        <code class="bg-light px-2 py-1 rounded-1 mx-1"
+                          >git fetch [剛建立的節點名稱] [分支]</code
+                        >
+                      </li>
+                      <li class="mb-2">
+                        更新進度：
+                        <code class="bg-light px-2 py-1 rounded-1 mx-1"
+                          >git pull [剛建立的節點名稱] [分支]</code
+                        >
+                      </li>
+                    </ol>
+                  </div>
+                  <div class="mb-3">
+                    <h3 class="h5 border-bottom">注意事項</h3>
+                    <ul>
+                      <li class="mb-2">
+                        建立遠端節點之後，透過<code
+                          class="bg-light px-2 py-1 rounded-1 mx-1"
+                          >git remote -v</code
+                        >確認遠端節點會有以下：
+                        <ul class="mt-2">
+                          <li class="mb-2">原專案遠端節點(fetch、push)</li>
+                          <li class="mb-2">自己的repo節點(fetch、push)</li>
+                        </ul>
+                      </li>
+                      <li>
+                        簡而言之：<code
+                          class="bg-light px-2 py-1 rounded-1 mx-1"
+                          >git pull = git fetch + git merge
+                        </code>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse-pull" id="multiCollapsePull2">
+                <div class="card card-body">
+                  <div class="mb-3">
+                    <h3 class="h5 border-bottom">參考文件</h3>
+                    <ul>
+                      <li>
+                        <a
+                          href="https://gitbook.tw/chapters/github/pull-from-github"
+                          >Pull 下載更新</a
+                        >
+                      </li>
                     </ul>
                   </div>
                 </div>
